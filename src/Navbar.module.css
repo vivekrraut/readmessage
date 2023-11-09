@@ -1,0 +1,13 @@
+.navbar {
+  background-color: #333; /* Set your desired background color */
+  color: white; /* Set your desired text color */
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px; /* Set your desired font size */
+  font-weight: bold;
+}

@@ -1,0 +1,94 @@
+.messageContainer {
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left; /* Adjust this if you want the text to align differently */
+  width: 90%;
+  max-width: 450px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.messageText {
+  display: inline-block;
+  background-color: #dcf8c6; /* Adjust the background color to your preference */
+  border-radius: 10px;
+  color: black; /* Adjust the text color to your preference */
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px; /* Adjust the font size to your preference */
+  padding: 10px 15px;
+  margin: 0;
+  word-wrap: break-word;
+  max-width: 95%; /* Limit message width to avoid long lines */
+  height: auto;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  margin-bottom: 10px;
+  text-align: left; /* Adjust this if you want the text to align differently */
+}
+
+.messageText.sender {
+  background-color: #e1f3fb; /* Adjust the background color for the sender's messages */
+  color: black; /* Adjust the text color for the sender's messages */
+  text-align: right; /* Adjust this if you want the sender's text to align differently */
+}
+
+.flexes {
+  display: flex;
+  flex-direction: row;
+}
+.likeButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  width: 24px; /* Set the desired size for the button */
+  height: 24px;
+}
+
+.heart {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 80%;
+    background: red;
+    border-radius: 50px 50px 0 0;
+  }
+  &::before {
+    left: 50%;
+    border-radius: 50px 50px 50px 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+  }
+  &::after {
+    left: 0;
+    border-radius: 50px 50px 0 50px;
+    transform: rotate(45deg);
+    transform-origin: 100% 0;
+  }
+}
+
+.liked .heart::before,
+.liked .heart::after {
+  background: gray; /* Set the color when the button is liked */
+}
+
+.likedText {
+  color: red; /* Set the text color when the button is liked */
+}
+
+.liked {
+  margin: 10px;
+}

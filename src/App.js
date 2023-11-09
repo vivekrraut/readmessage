@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Message from "./Message";
+import Navbar from "./Navbar";
 
 function App() {
+  const yourMessage =
+    "Hope you are here...❤ Welcome Dear ! Reaaly missing You So Much ... You will see my replies Here :)";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Message message={yourMessage} />
     </div>
   );
 }
